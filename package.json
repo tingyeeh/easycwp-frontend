@@ -1,36 +1,29 @@
 {
-  "name": "easycwp-frontend",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=--max_old_space_size=4096 refine dev",
-    "build": "refine build",
-    "start": "refine start",
-    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
-    "refine": "refine"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@refinedev/cli": "^2.0.0",
-    "@refinedev/core": "^4.0.0",
-    "@refinedev/nextjs-router": "^5.0.0",
-    "@refinedev/inferencer": "^3.0.0",
-    "@refinedev/kbar": "^1.0.0",
-    "next": "^13.0.6",
-    "nookies": "^2.5.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "@refinedev/strapi-v4": "^4.0.0",
-    "axios": "^0.26.1",
-    "@refinedev/react-hook-form": "^4.0.0",
-    "@refinedev/react-table": "^5.0.0",
-    "next-i18next": "^8.9.0"
+    "@headlessui/react": "^1.7.13",
+    "@heroicons/react": "^2.0.16",
+    "@types/node": "18.15.10",
+    "@types/react": "18.0.30",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.2"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@types/node": "^12.20.11",
-    "@typescript-eslint/parser": "5.48.0",
-    "typescript": "^4.7.4",
-    "cross-env": "^7.0.3"
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   }
 }
