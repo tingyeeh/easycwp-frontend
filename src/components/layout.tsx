@@ -5,9 +5,11 @@ import Footer from '@/components/Footer'
 
 type LayoutProps = {
   children: React.ReactNode
+  Header: React.FC;
+  Footer: React.FC;
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, Header, Footer }: LayoutProps) {
   return (
     <>      
       <Head>
