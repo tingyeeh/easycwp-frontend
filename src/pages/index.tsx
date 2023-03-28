@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import type { NextPageWithLayout } from './_app'
 import Layout from '@/components/layout'
-import Sidebar from '@/components/sidebar'
-import LocaleSwitcher from '@/components/locale-switcher'
+import Sidebar from '@/components/Sidebar'
+import LocaleSwitcher from '@/components/LocaleSwitcher'
 
 import styles from '@/styles/Home.module.css'
 

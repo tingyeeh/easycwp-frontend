@@ -2,7 +2,7 @@ import type { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import LocaleSwitcher from '../components/locale-switcher'
+import LocaleSwitcher from '../components/LocaleSwitcher'
 
 type GsspPageProps = InferGetServerSidePropsType<typeof getServerSideProps>
 

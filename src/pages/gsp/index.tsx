@@ -2,7 +2,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import LocaleSwitcher from '../../components/locale-switcher'
+import LocaleSwitcher from '../../components/LocaleSwitcher'
 
 type GspPageProps = InferGetStaticPropsType<typeof getStaticProps>
 
