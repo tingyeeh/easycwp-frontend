@@ -1,10 +1,15 @@
 import Link from 'next/link'
 import styles from '@/styles/sidebar.module.css'
 
-export default function Sidebar() {
+type SidebarProps = {
+  children: React.ReactNode
+}
+
+export default function Sidebar({ children }: SidebarProps) {
   return (
     <nav className={styles.nav}>
-    This is sidebar
+    Sidebar works
+    {children}
     </nav>
   )
 }
