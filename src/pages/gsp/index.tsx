@@ -2,11 +2,13 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import LocaleSwitcher from '../../components/LocaleSwitcher'
+import Layout from '@/components/layout'
+import Sidebar from '@/components/Sidebar'
+import LocaleSwitcher from '@/components/LocaleSwitcher'
 
 type GspPageProps = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function GspPage(props: GspPageProps) {
+const GspPage: NextPageWithLayout = (props: GspPageProps) => {
   const router = useRouter()
   const { defaultLocale } = router
 
@@ -28,6 +30,17 @@ export default function GspPage(props: GspPageProps) {
       <Link href="/">To index page</Link>
       <br />
     </div>
+  )
+}
+
+export default GspPage
+
+GspPage.getLayout = function getLayout(page: React.ReactElement) {
+  return (
+    <Layout>
+      <Sidebar />
+      {page}
+    </Layout>
   )
 }
 
