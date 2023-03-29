@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from '@/styles/Sidebar.module.css'
 
 type SidebarProps = {

@@ -1,18 +1,17 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  i18n: {
-    locales: ['en', 'ko', 'ja', 'vi', 'fr', 'de', 'zh-Hans', 'zh-Hant'],
-    defaultLocale: 'en',
-  },
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.ya?ml$/,
-      type: 'json',
-      use: 'yaml-loader',
-    })
-    return config
-  },
-}
+/* eslint-disable import/no-extraneous-dependencies */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer({
+  eslint: {
+    dirs: ['.'],
+  },
+  poweredByHeader: false,
+  trailingSlash: true,
+  basePath: '',
+  // The starter code load resources from `public` folder with `router.basePath` in React components.
+  // So, the source code is "basePath-ready".
+  // You can remove `basePath` if you don't need it.
+  reactStrictMode: true,
+});

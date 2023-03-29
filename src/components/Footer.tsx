@@ -1,6 +1,4 @@
-import Head from 'next/head'
-import styles from '@/styles/layout.module.css'
-
+import { AppConfig } from '@/utils/AppConfig';
 
 const navigation = {
   solutions: [
@@ -29,11 +27,7 @@ const navigation = {
   ],
 }
 
-type FooterProps = {
-  children: React.ReactNode
-}
-
-export default function Footer({ children }: FooterProps) {
+export default function Footer() {
   return (
     <footer className="bg-white" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -101,6 +95,9 @@ export default function Footer({ children }: FooterProps) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="border-t border-gray-300 py-8 text-center text-sm">
+      © {new Date().getFullYear()} {AppConfig.title} all rights reserved.
       </div>
     </footer>
   )
